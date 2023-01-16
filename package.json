@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "console03": "nodemon ./js/03-strings.js -cl",
-    "console02": "nodemon ./js/02-numbers.js -cl",
-    "console01": "nodemon ./js/01-console.js -cl",
+    "console": "nodemon ./js/01-console.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
