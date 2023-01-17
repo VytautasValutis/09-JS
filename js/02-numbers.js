@@ -17,3 +17,4 @@ console.log(metai);
 console.log(Infinity);
 const saknis = 4 ** 1.6;
 console.log(saknis);
+console.log(`Saknis ${saknis}`);
