@@ -43,8 +43,39 @@ console.log(`Skaicius 3.14 skaitmenu kiekis : ${skaitmenuKiekisSkaiciuje(3.14)}`
 console.log(`Skaicius "aBc" skaitmenu kiekis : ${skaitmenuKiekisSkaiciuje("aBc")}`);
 console.log(`----------------------------------`);
 function didziausiasSkaiciusSarase(a) {
-    
+    if (a.length === 0) {
+        return `Sarasas negali buti tuscias`;
+    } else if (typeof(a[0]) !== "number") {
+        return `Pateikta netinkamo tipo reiksme`;
+    }
+    let ilgis = a.length; 
+    let max = a[0];
+    for (let i = 1; i < ilgis; i++){
+        if (a[i] > max) {
+            max = a[i];
+        }
+    }
+    return max;
 }
+const bad = ['a', 'b', 'c'];
+let param = [];
+console.log(didziausiasSkaiciusSarase(param));
+param = [1];
+console.log(didziausiasSkaiciusSarase(param));
+param = [1, 2, 3];
+console.log(didziausiasSkaiciusSarase(param));
+console.log(didziausiasSkaiciusSarase(5));
+console.log(didziausiasSkaiciusSarase('A'));
+console.log(didziausiasSkaiciusSarase(NaN));
+console.log(didziausiasSkaiciusSarase(bad));
+param = [-5, 78, 14, 0, 18];
+console.log(didziausiasSkaiciusSarase(param));
+param = [69, 69, 69, 69, 66];
+console.log(didziausiasSkaiciusSarase(param));
+param = [-1, -2, -3, -4, -5, -6, -7, -8, -9];
+console.log(didziausiasSkaiciusSarase(param));
+console.log(didziausiasSkaiciusSarase("pomidoras"));
+console.log(`----------------------------`);
 
 
 
