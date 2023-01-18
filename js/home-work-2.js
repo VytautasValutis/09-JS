@@ -18,7 +18,7 @@ console.log (daugyba(true, 2));
 console.log (daugyba(`true`, 2));
 console.log(`---------------------`);
 function skaitmenuKiekisSkaiciuje(a) {
-    if (typeof(a) !== "number" || a === NaN || a === Infinity) {
+    if (typeof(a) !== "number" || Number.isNaN(a) || a === Infinity) {
         return `Pateikta netinkamo tipo reiksme`;
     }
     if (a % 1 !== 0) {
@@ -104,7 +104,33 @@ console.log(isrinktiRaides("abcdefghijkl", "A"));
 console.log(isrinktiRaides("abc", 0));
 console.log(isrinktiRaides(1561, 2));
 console.log(`----------------------------`);
-
+function dalyba(a, b) {
+    if (typeof(a) !== "number" || Number.isNaN(a) || a === Infinity) {
+        return `Neteisingas pirmas parametras`;
+    }
+    if (typeof(b) !== "number" || Number.isNaN(b) || b === Infinity) {
+        return `Neteisingas antras parametras`;
+    }
+    if (b === 0) {
+        return `Dalinti is nulio negalima`;
+    }
+    const rez = a / b;
+    return rez;
+}
+console.log(`-- 01: `,dalyba(6, 3));
+console.log(`-- 02: `,dalyba(-5, 3));
+console.log(`-- 03: `,dalyba(3.14, -8.2));
+console.log(`-- 04: `,dalyba("A", 3));
+console.log(`-- 05: `,dalyba(6, true));
+console.log(`-- 06: `,dalyba(6, NaN));
+const bad2 = [3, 5, -3];
+console.log(`-- 07: `,dalyba(6, bad2));
+console.log(`-- 08: `,dalyba(6, Infinity));
+console.log(`-- 09: `,dalyba(7, 0));
+console.log(`-- 10: `,dalyba(0, 33));
+console.log(`-- 11: `,dalyba(11, 1));
+console.log(`-- 12: `,dalyba(NaN, NaN));
+console.log(`-----------------------`);
 
 
 
