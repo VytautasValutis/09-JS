@@ -1,5 +1,6 @@
 console.clear();
 console.log(typeof 5);
+console.log(typeof 5.3);
 console.log(typeof Infinity);
 console.log(typeof NaN);
 console.log(typeof ``);
