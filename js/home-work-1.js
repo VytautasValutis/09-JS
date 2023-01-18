@@ -142,26 +142,20 @@ console.clear();
 console.log(`------------------------`);
 let ilgis = dTxt.length;
 let dTxtRevers = ``;
-let i = ilgis - 1;
-dTxtRevers += dTxt.substring(i);
-for (let i = ilgis - 2; i >= 0; i--) {
-    dTxtRevers += dTxt.substring(i, i+1);
+for (let i = ilgis - 1; i >= 0; i--) {
+    dTxtRevers += dTxt[i];
 }
 console.log(dTxtRevers);
 ilgis = eTxt.length;
 let eTxtRevers = ``;
-i = ilgis - 1;
-eTxtRevers += eTxt.substring(i);
-for (let i = ilgis - 2; i >= 0; i--) {
-    eTxtRevers += eTxt.substring(i, i+1);
+for (let i = ilgis - 1; i >= 0; i--) {
+    eTxtRevers += eTxt[i];
 }
 console.log(eTxtRevers);
-ilgis = eTxt.length;
+ilgis = fTxt.length;
 let fTxtRevers = ``;
-i = ilgis - 1;
-fTxtRevers += fTxt.substring(i);
-for (let i = ilgis - 2; i >= 0; i--) {
-    fTxtRevers += fTxt.substring(i, i+1);
+for (let i = ilgis - 1; i >= 0; i--) {
+    fTxtRevers += fTxt[i];
 }
 console.log(fTxtRevers);
 console.log(`------------------------`);
