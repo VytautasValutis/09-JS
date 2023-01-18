@@ -76,7 +76,34 @@ param = [-1, -2, -3, -4, -5, -6, -7, -8, -9];
 console.log(didziausiasSkaiciusSarase(param));
 console.log(didziausiasSkaiciusSarase("pomidoras"));
 console.log(`----------------------------`);
-
+function isrinktiRaides(txt, nr) {
+    if (typeof(txt) !== "string") {
+        return `Pirmas kintamasis yra netinkamo tipo`;
+    }
+    const ilgis = txt.length;
+    if (ilgis === 0 || ilgis > 100) {
+        return `Pirmojo kintamojo reiksme yra netinkamo dydzio`;
+    }
+    if (typeof(nr) !== "number" || nr % 1 !== 0) {
+        return `Antrasis kintamasis yra netinkamo tipo`;
+    }
+    if (nr === 0) {
+        return `Antrasis kintamasis turi buti didesnis uz nuli`;
+    }
+    let rez = ``;
+    for (let i = nr-1; i < ilgis; i += nr) {
+        rez += txt[i];       
+    }
+    return rez;
+}
+console.log(isrinktiRaides("abcdefg", 2));
+console.log(isrinktiRaides("", 2));
+console.log(isrinktiRaides("abcdefghijkl", 3));
+console.log(isrinktiRaides("abcdefghijkl", 3.5));
+console.log(isrinktiRaides("abcdefghijkl", "A"));
+console.log(isrinktiRaides("abc", 0));
+console.log(isrinktiRaides(1561, 2));
+console.log(`----------------------------`);
 
 
 
