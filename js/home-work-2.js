@@ -18,7 +18,7 @@ console.log (daugyba(true, 2));
 console.log (daugyba(`true`, 2));
 console.log(`---------------------`);
 function skaitmenuKiekisSkaiciuje(a) {
-    if (typeof(a) !== "number" || Number.isNaN(a) || a === Infinity) {
+    if (typeof(a) !== "number" || Number.isNaN(a) || a === Infinity || a === -Infinity) {
         return `Pateikta netinkamo tipo reiksme`;
     }
     if (a % 1 !== 0) {
@@ -105,10 +105,10 @@ console.log(isrinktiRaides("abc", 0));
 console.log(isrinktiRaides(1561, 2));
 console.log(`----------------------------`);
 function dalyba(a, b) {
-    if (typeof(a) !== "number" || Number.isNaN(a) || a === Infinity) {
+    if (typeof(a) !== "number" || Number.isNaN(a) || a === Infinity || a === -Infinity) {
         return `Neteisingas pirmas parametras`;
     }
-    if (typeof(b) !== "number" || Number.isNaN(b) || b === Infinity) {
+    if (typeof(b) !== "number" || Number.isNaN(b) || b === Infinity || b === -Infinity) {
         return `Neteisingas antras parametras`;
     }
     if (b === 0) {
@@ -130,6 +130,7 @@ console.log(`-- 09: `,dalyba(7, 0));
 console.log(`-- 10: `,dalyba(0, 33));
 console.log(`-- 11: `,dalyba(11, 1));
 console.log(`-- 12: `,dalyba(NaN, NaN));
+console.log(`-- 13: `,dalyba(6, -Infinity));
 console.log(`-----------------------`);
 
 
