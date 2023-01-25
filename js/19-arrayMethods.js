@@ -16,10 +16,16 @@ function double(n) {
     return n * 2;
 }
 
-const marks2 =marks.map(double);
+const marks2 = marks.map(double);
 console.log(marks);
 console.log(marks2);
 
+console.log(`-----------------`);
+const numbers = [1,2,3,4,5,6,7];
+console.log(numbers);
+const lyginiai = numbers.filter(n => n % 2 === 0);
+console.log(lyginiai);
 
-
-
+const students = [`Ona`,`Petras`,`Maryte`, `Jonas`];
+console.log(students);
+console.log(students.filter(n => n.length <= 5).map(v => v[0]).sort().join('-'));
