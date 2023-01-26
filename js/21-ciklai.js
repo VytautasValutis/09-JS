@@ -61,6 +61,66 @@ console.log(students);
 students.sort((a, b) => a.age - b.age);
 console.log(students);
 
+// REDUCE
+const sumReduce = marks.reduce((sum, mark) => sum + mark);
+console.log(sumReduce / marks.length);
+
+const num = [1, 2, 3, 4];
+const sumPlus = num.reduce((sum, mark) => sum + mark);
+console.log(sumPlus);
+
+const sumMinus = num.reduce((sum, mark) => sum - mark);
+console.log(sumMinus);
+
+const sumMinus2 = num.reduce((sum, mark) => sum - mark, 0);
+console.log(sumMinus2);
+
+// FOR-IN
+console.log('--------------------');
+const persons = [
+    {
+        name: 'Petras',
+        age: 77,
+        isMarried: true, 
+    },
+    {
+        name: 'Jonas',
+        age: 66,
+        isMarried: true, 
+    },
+    {
+        name: 'Ona',
+        age: 33,
+        isMarried: false, 
+    },
+    {
+        name: 'Maryte',
+        age: 99,
+        isMarried: false, 
+    },
+];
+ console.log(persons);
+ const key = Object.keys(persons);
+ console.log(key);
+
+persons.car = 'Volvo';
+
+key = Object.keys(persons);
+console.log(key);
+
+// const keys = ['name', 'age','married'];
+for (let i = 0; i < keys.length; i++) {
+    const key = keys[i];
+    // console.log(persons[key]);    
+};
+
+for(const key in persons) {
+    console.log(key);
+};
+
+for(const key in [11, 22, 33]) {
+    console.log(key);
+};
 
 
 
